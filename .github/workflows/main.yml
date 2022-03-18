@@ -12,6 +12,8 @@ jobs:
           who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
+      - run: ls -la Daisugi01/hello-world-composite-action@v0.2
+        shell: bash
 
   hello_world_job2:
     runs-on: ubuntu-18.04
