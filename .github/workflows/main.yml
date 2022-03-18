@@ -12,60 +12,13 @@ jobs:
           who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
-  hello_world_job1:
-    needs: [hello_world_job]
-    runs-on: ubuntu-18.04
-    name: A job to say hello
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test/
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
   hello_world_job2:
-    needs: [hello_world_job1]
     runs-on: ubuntu-18.04
-    name: A job to say hello
+    name: A job to say hello2
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: ./.github/actions/system-test/
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-  hello_world_job3:
-    needs: [hello_world_job2]
-    runs-on: ubuntu-18.04
-    name: A job to say hello
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test/
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-  hello_world_job4:
-    runs-on: ubuntu-18.04
-    name: A job to say hello
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test/
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-  hello_world_job5:
-    runs-on: ubuntu-18.04
-    name: A job to say hello
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test/
+        uses: ./.github/actions/system-test
         with:
           who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
