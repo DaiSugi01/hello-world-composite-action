@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: Daisugi01/hello-world-composite-action/.github/system-test.yaml@v0.3
+        uses: Daisugi01/hello-world-composite-action/.github@v0.4
         with:
           who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
