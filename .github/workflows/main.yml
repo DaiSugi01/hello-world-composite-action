@@ -37,14 +37,14 @@ jobs:
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 
-  hello_world_job4:
-    runs-on: ubuntu-18.04
-    name: action.yaml under system-test without version. Specified absolute path
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+  # hello_world_job4:
+  #   runs-on: ubuntu-18.04
+  #   name: action.yaml under system-test without version. Specified absolute path
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - id: foo
+  #       uses: ./.github/actions/system-test
+  #       with:
+  #         who-to-greet: "Mona the Octocat"
+  #     - run: echo random-number ${{ steps.foo.outputs.random-number }}
+  #       shell: bash
