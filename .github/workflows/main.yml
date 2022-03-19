@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-18.04
-    name: using tag. Specified Repository path
+    name: using tag. Specified Repository path. under root dir
     steps:
       - uses: actions/checkout@v2
       - id: foo
