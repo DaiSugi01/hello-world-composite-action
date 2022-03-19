@@ -37,26 +37,26 @@ jobs:
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 
-  hello_world_job4:
-    runs-on: ubuntu-18.04
-    name: A job to say hello4
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: Daisugi01/hello-world-composite-action/.github/actions/system-test/action.yaml
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+  # hello_world_job4:
+  #   runs-on: ubuntu-18.04
+  #   name: A job to say hello4
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - id: foo
+  #       uses: Daisugi01/hello-world-composite-action/.github/actions/system-test/action.yaml
+  #       with:
+  #         who-to-greet: "Mona the Octocat"
+  #     - run: echo random-number ${{ steps.foo.outputs.random-number }}
+  #       shell: bash
 
-  hello_world_job5:
-    runs-on: ubuntu-18.04
-    name: A job to say hello4
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/system-test.yaml
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+  # hello_world_job5:
+  #   runs-on: ubuntu-18.04
+  #   name: A job to say hello4
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - id: foo
+  #       uses: ./.github/system-test.yaml
+  #       with:
+  #         who-to-greet: "Mona the Octocat"
+  #     - run: echo random-number ${{ steps.foo.outputs.random-number }}
+  #       shell: bash
