@@ -1,5 +1,8 @@
 on: [push]
 
+env:
+  go-version: 1.1
+
 jobs:
   hello_world_job1:
     runs-on: ubuntu-18.04
@@ -10,6 +13,7 @@ jobs:
         uses: Daisugi01/hello-world-composite-action/.github/actions/system-test@v0.5
         with:
           who-to-greet: "Mona the Octocat"
+      - run: echo ${{ env.go-version }}
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 
